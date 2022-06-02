@@ -1,0 +1,22 @@
+<h1>Edit Book</h1>
+<!--<a routerLink="/book">List Book</a>-->
+
+<br>
+<div class="container">
+  <form [formGroup]="bookForm" (ngSubmit)="update(id)" >
+    <input type="hidden" id="id" name="id" formControlName="id">
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input type="text" class="form-control" id="title" aria-describedby="emailHelp" formControlName="title">
+    </div>
+    <div class="mb-3">
+      <label for="author" class="form-label">Author</label>
+      <input type="text" class="form-control" id="author" aria-describedby="emailHelp" formControlName="author">
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <textarea type="text" class="form-control" id="description" aria-describedby="emailHelp" formControlName="description"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary" >Edit</button>
+  </form>
+</div>
